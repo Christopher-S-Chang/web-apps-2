@@ -7,12 +7,14 @@
 <h3>Contacts</h3>
 
 <ul>
-  <li>Michael Scott</li>
+<% for contact in @contacts %>
+  <li><%= contact["first_name"] %> <%= contact["last_name"] %>  </li>
+  <%end%>
   <li>Dwight Schrute</li>
 </ul>
 
 <p>
-  <a href="">New Contact</a>
+  <a href="/contacts/new">New Contact</a>
 </p>
 
 <p>
